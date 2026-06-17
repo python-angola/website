@@ -212,6 +212,7 @@ h1 {
               inset 0 1px 1px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 212, 59, 0.15);
   overflow: hidden;
+  perspective: 1000px;
 }
 
 .hero-logo-card::before {
@@ -235,6 +236,13 @@ h1 {
   75% { transform: translateY(-8px) rotateZ(0.3deg); }
 }
 
+@keyframes coinFlip {
+  0%, 100% { transform: rotateY(0deg); }
+  25% { transform: rotateY(20deg); }
+  50% { transform: rotateY(0deg); }
+  75% { transform: rotateY(-20deg); }
+}
+
 .hero-logo {
   position: relative;
   z-index: 1;
@@ -242,6 +250,8 @@ h1 {
   height: 90%;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  animation: coinFlip 6s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 .section {
