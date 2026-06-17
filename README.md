@@ -2,19 +2,28 @@
 
 A launch-ready static website for the Python Angola community initiative.
 
+## Setup
+
+### Add logo images
+
+Create an `images/` folder and add your logos:
+- `images/logo.png` — header logo (square format, ~50px minimum)
+- `images/logo-circular.png` — hero section logo (circular format, ~400px minimum)
+
+Recommended: PNG format with transparent background.
+
 ## What is included
 
 - `index.html` — modern landing page with hero, roadmap, focus areas, and contact information.
-- `styles.css` — polished dark theme design with smooth layout and hover interactions.
+- `styles.css` — polished dark theme design with smooth layout and logo integration.
 - `script.js` — language detection and translation support for English, Português, and Français.
 - `CNAME` — GitHub Pages custom domain configuration for `pythonangola.org`.
 
 ## How to use
 
-1. Open `index.html` locally to preview the website.
-2. Update the Google Forms link in `index.html`:
-   - Replace `https://forms.gle/YOUR_FORM_ID` with your actual form.
-3. Update `contact@pythonangola.org` after email is configured.
+1. Add your logo images to the `images/` folder (see Setup section above).
+2. Open `index.html` locally to preview the website.
+3. Update `contact@pythonangola.org` as needed.
 4. Push the repository to GitHub.
 
 ## Deploying to GitHub Pages

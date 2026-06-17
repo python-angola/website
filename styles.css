@@ -74,8 +74,8 @@ a {
   place-items: center;
   background: linear-gradient(135deg, #265f9a, #dba923);
   box-shadow: 0 15px 40px rgba(45, 85, 149, 0.22);
-  color: #000;
-  font-size: 1.5rem;
+  object-fit: contain;
+  padding: 4px;
 }
 
 .brand-title {
@@ -199,35 +199,42 @@ h1 {
   position: relative;
 }
 
-.hero-card {
+.hero-logo-card {
   position: relative;
-  padding: 2rem;
-  min-height: 320px;
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border-radius: 40px;
+  background: linear-gradient(135deg, rgba(255, 212, 59, 0.12), rgba(48, 105, 152, 0.08));
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.35),
+              inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 212, 59, 0.15);
   overflow: hidden;
 }
 
-.hero-card::before {
+.hero-logo-card::before {
   content: '';
   position: absolute;
-  inset: -30% -40%;
-  background: radial-gradient(circle at top left, rgba(255, 212, 59, 0.25), transparent 35%);
+  inset: -50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 212, 59, 0.25), transparent 35%),
+              radial-gradient(circle at 70% 70%, rgba(48, 105, 152, 0.15), transparent 35%);
+  animation: shimmer 8s ease-in-out infinite;
 }
 
-.hero-card-inner {
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-logo {
   position: relative;
   z-index: 1;
-  display: grid;
-  gap: 1rem;
-}
-
-.hero-card strong {
-  display: block;
-  font-size: 1.8rem;
-  line-height: 1.1;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
 .section {
