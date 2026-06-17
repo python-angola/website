@@ -229,11 +229,12 @@ h1 {
   50% { opacity: 1; }
 }
 
-@keyframes sway {
-  0%, 100% { transform: translateY(0px) rotateZ(-0.5deg); }
-  25% { transform: translateY(-8px) rotateZ(0.3deg); }
-  50% { transform: translateY(-4px) rotateZ(-0.5deg); }
-  75% { transform: translateY(-8px) rotateZ(0.3deg); }
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  10% { transform: scale(1.08); }
+  20% { transform: scale(1); }
+  28% { transform: scale(1.08); }
+  40% { transform: scale(1); }
 }
 
 @keyframes coinFlip {
@@ -355,7 +356,7 @@ h1 {
   display: block;
   border-radius: 28px;
   transition: transform 0.3s ease;
-  animation: sway 4s ease-in-out infinite;
+  animation: heartbeat 1.2s ease-in-out infinite;
   transform-origin: center;
 }
 
