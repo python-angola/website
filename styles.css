@@ -231,10 +231,10 @@ h1 {
 
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
-  10% { transform: scale(1.08); }
-  20% { transform: scale(1); }
-  28% { transform: scale(1.08); }
-  40% { transform: scale(1); }
+  14% { transform: scale(1.04); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.04); }
+  70% { transform: scale(1); }
 }
 
 @keyframes coinFlip {
@@ -356,7 +356,7 @@ h1 {
   display: block;
   border-radius: 28px;
   transition: transform 0.3s ease;
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat 2.8s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
   transform-origin: center;
 }
 
