@@ -326,6 +326,24 @@ h1 {
   background: rgba(255, 212, 59, 0.08);
 }
 
+.banner-section {
+  margin-top: 3rem;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  transition: transform 0.3s ease;
+}
+
+.banner-image:hover {
+  transform: scale(1.02);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
